@@ -1,21 +1,4 @@
-"""
-Translator application:
-1. It will load a file ( word, word \n ) into a dictionary
-2. Convert line to couple with split() - latin word : key, english word: value
-3. Menu to prompt user for english word input. ( use try / except to filter
- absent value )
-4. goal: evaluate Python's dictionary form a PERFORMANCE standpoint
-5. Also need to calculate time complexity of each function/line and the
-whole program
-6. finally translate 5 phrases in latin to english for sample run
 
-
-Notes:
-    - probably want a function to load, to parse and to function each line
-    whichever runs faster
-test phrase for word not in dictionary.
-subductisupercilicarptor betizare
-"""
 import time
 
 """ 
@@ -30,7 +13,7 @@ class Translator:
     __runtime_benchmarks = []
 
     def __init__(self):
-        self.word_dict = self.load_file('latin.txt')
+        pass
 
     def load_file(self, file):
         """Loads a text file in the format:( word, word \n )
@@ -68,19 +51,21 @@ class Translator:
         while True:
             phrase = input("Please enter a latin phrase to translate: ")
             if phrase == 'exit':
+                self.list_runtimes()
                 break
+            start = time.time()
+            self.word_dict = self.load_file('latin.txt')
             print(f"English translation: "
                   f"{self.latin_to_english(phrase)}")
-
-    def timer(self, func):
-        """ Runs the program functions in a simple benchmarking
-        structure.  The return value will appear after the included
-        functions return their output.
-        """
-        pass
+            stop = time.time()
+            total = stop - start
+            Translator.__runtime_benchmarks.append(total)
 
     def list_runtimes(self):
         """ Lists all entries in the movie list. """
+
+        print("Here are your translation algorithm runtimes:".center(55))
         counter = 1
         for item in Translator.__runtime_benchmarks:
-            print(f'{counter}  - {item:.9f}')
+            print(f'{counter}  - {item:.13f}')
+            counter += 1

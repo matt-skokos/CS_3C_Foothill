@@ -1,14 +1,6 @@
 from mattSkokosLab2 import Translator
 
 
-def user_menu(self):
-    """ This will prompt the user for English word input"""
-    while True:
-        phrase = input("Please enter a latin phrase to translate: ")
-        if phrase == 'exit':
-            break
-        print(f"English translation: "
-              f"{.latin_to_english(phrase)}")
 def main():
     translate1 = Translator()
     translate1.user_menu()
@@ -18,8 +10,16 @@ if __name__ == "__main__":
     main()
 
 """
-strange question but is strip better than or the same as replace here?
-latin = latin.strip(',')
-latin = latin.replace(',', '')
+
+strings to check:
+in vinum veritas
+cogito ergo cogito repetitio cogito
+fas est et ab hoste doceri   - won't work fully
+subductisupercilicarptor betizare  - won't work at all
+admoveo velociter lente pullus hospes terra
+abbas
+
+
+It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way—in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only. 
 
 """
