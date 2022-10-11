@@ -6,7 +6,6 @@ def main():
     translate1 = Translator()
 
 
-
 if __name__ == "__main__":
     main()
 
