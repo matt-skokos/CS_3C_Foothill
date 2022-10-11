@@ -1,4 +1,5 @@
 from mattSkokosLab2 import Translator
+import time
 
 
 def timer(self, func):
@@ -18,7 +19,7 @@ def timer(self, func):
 def main():
     translate1 = Translator()
     # translate1.load_file('latin.txt')
-    translate1.timer(translate1.load_file('latin.txt'))
+    translate1.load_file('latin.txt')
 
 
 if __name__ == "__main__":
