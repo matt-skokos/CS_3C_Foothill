@@ -31,7 +31,6 @@ class Translator:
 
     def __init__(self):
         self.word_dict = self.load_file('latin.txt')
-        self.user_menu()
 
     def load_file(self, file):
         """Loads a text file in the format:( word, word \n )
@@ -70,16 +69,18 @@ class Translator:
             phrase = input("Please enter a latin phrase to translate: ")
             if phrase == 'exit':
                 break
-            print("English translation: ", end='')
-            print(self.latin_to_english(phrase))
+            print(f"English translation: "
+                  f"{self.latin_to_english(phrase)}")
 
     def timer(self, func):
         """ Runs the program functions in a simple benchmarking
         structure.  The return value will appear after the included
         functions return their output.
         """
-        print("here")
+        pass
 
     def list_runtimes(self):
         """ Lists all entries in the movie list. """
-        pass
+        counter = 1
+        for item in Translator.__runtime_benchmarks:
+            print(f'{counter}  - {item:.9f}')
