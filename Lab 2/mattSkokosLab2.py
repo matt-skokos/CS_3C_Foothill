@@ -78,7 +78,7 @@ class Translator:
         structure.  The return value will appear after the included
         functions return their output.
         """
-        pass
+        print("here")
 
     def list_runtimes(self):
         """ Lists all entries in the movie list. """
