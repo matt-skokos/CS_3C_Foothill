@@ -1,4 +1,21 @@
+"""
+Benchmark results of run-time performance:
+
+
+Big O notation of Algorithm:
+load_file():
+T(n) = 5(n) + 4 ---> Big-O = O(n)
+
+latin_to_english():
+T(n) = 3(n) + 4 ---> Big-O = O(n)
+
+
+
+
+"""
+
 from mattSkokosLab2 import Translator
+
 
 
 def main():
