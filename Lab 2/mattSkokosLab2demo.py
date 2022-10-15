@@ -1,17 +1,53 @@
 """
+Test driver to present a run environment for the Translator class
+using a Latin - English dictionary.
+
 Benchmark results of run-time performance:
+
+Please enter a latin phrase to translate: subductisupercilicarptor betizare sunt
+English translation: subductisupercilicarptor betizare sunt
+Please enter a latin phrase to translate: in vinum veritas
+English translation:  in  wine  truth
+Please enter a latin phrase to translate: vulnero vulgivagus vindico villa redemptio redarguo recordor quotiens quotienscumque quisquis quinquennis quinam veni vidi vici
+English translation:  wound  wandering  avenge  country  ransoming  disprove  remember  often  however  whoever  five  which  come  see  conquer
+Please enter a latin phrase to translate: cogito ergo cogito repetitio
+English translation:  think  therefore  think  repetition
+Please enter a latin phrase to translate: fas est et ab hoste doceri
+English translation:  divine  is  and ab hoste doceri
+Please enter a latin phrase to translate: admoveo velociter lente pullus hospes terra
+English translation:  move  quickly  slowly  young  guest  earth
+Please enter a latin phrase to translate: abbas
+English translation:  father
+Please enter a latin phrase to translate: exit
+     Here are your translation algorithm runtimes:
+1  - 0.0087685585022
+2  - 0.0080428123474
+3  - 0.0099050998688
+4  - 0.0090262889862
+5  - 0.0080440044403
+6  - 0.0078492164612
+7  - 0.0031263828278
 
 
 Big O notation of Algorithm:
 load_file():
-T(n) = 5(n) + 4 ---> Big-O = O(n)
+T(n) = 1(n) + 7 ---> Big-O = O(n)
 
 latin_to_english():
-T(n) = 3(n) + 4 ---> Big-O = O(n)
+T(n) = 1(n) + 6 ---> Big-O = O(n)
+
+Algorithm Complexity --->    Big-0 = O(n)
 
 
+Latin strings to check:
 
-
+in vinum veritas
+vulnero vulgivagus vindico villa redemptio redarguo recordor quotiens quotienscumque quisquis quinquennis quinam veni vidi vici
+cogito ergo cogito repetitio
+fas est et ab hoste doceri
+subductisupercilicarptor betizare sunt
+admoveo velociter lente pullus hospes terra
+abbas
 """
 
 from mattSkokosLab2 import Translator
@@ -26,17 +62,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-"""
-
-strings to check:
-in vinum veritas
-cogito ergo cogito repetitio cogito
-fas est et ab hoste doceri   - won't work fully
-subductisupercilicarptor betizare  - won't work at all
-admoveo velociter lente pullus hospes terra
-abbas
-
-
-It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way—in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only. 
-
-"""
