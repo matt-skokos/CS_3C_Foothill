@@ -1,8 +1,32 @@
+"""
+Matt Skokos
+Assignment 3 - Linked Lists and Stacks
 
-0
+This project will implement a node class, a stack class and the related
+methods to create and manipulate them.
+"""
+
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+    def getValue(self):
+        return self.value
+
+    def getNext(self):
+        return self.next
+
+    def setValue(self, newValue):
+        self.value = newValue
+
+    def setNext(self, newNext):
+        self.next = newNext
+
 class Stack:
     def __init__(self):
-        self.stack = []
+        self.head = Node("head")
+        self.size = 0
 
     def push(self, item):
         self.stack.append(item)
@@ -16,6 +40,7 @@ class Stack:
     def isEmpty(self):
         return self.stack == []
 
+    @classmethod
     def createStack(self, name):
         name = Stack()
 
